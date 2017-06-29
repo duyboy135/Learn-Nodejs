@@ -1,12 +1,23 @@
 {
-  "name": "newapp",
-  "version": "1.0.0",
-  "description": "",
+  "name": "duyboy135",
+  "version": "0.0.1",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "6.10.2"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "ejs": "2.5.6",
+    "express": "4.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duyboy135/duyboy135"
+  },
+  "keywords": [
+  ],
+  "license": "MIT"
 }
