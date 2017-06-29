@@ -32,6 +32,6 @@ app.get('/invalid', function(req , res) {
    res.sendFile(path.join(__dirname + '/invalid.html'));
 })
 
-app.listen(3000, function () {
+app.listen((process.env.PORT || 5000), function () {
   console.log('Listening');
 })
