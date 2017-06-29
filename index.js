@@ -1,28 +1,21 @@
-var main = require('http');
-var Url = require('url');
-var outp = require('fs');
-	
-main.createServer(function(req,res){
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    var q = Url.parse(req.url, true);
-    if(q.pathname=='/tentuoi'){
-    res.write(q.query.name);
-    res.write('<br>');
-    res.write(q.query.age);
-    res.write('<br>');
-    var ans = q.query.name + ' ' + q.query.age;
-    outp.writeFile('information.txt', ans, function (err) {
-    if (err) throw err;
-    console.log('Saved!');
-    });
-    }
-    else{
-    res.write('<form action ="/tentuoi">');
-    res.write('Name:<br> <input type = "text" name = "name"> <br>');
-    res.write('Age:<br> <input type = "text" name = "age"> <br>');
-    res.write('<input type = "submit" value = "sub">');
-    res.write('</form>');
-    }
-    res.end();
+var express = require('express')
+var app = express()
+var path = require('path');
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-}).listen((process.env.PORT || 5000));
+// respond with "hello world" when a GET request is made to the homepage
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + '/form.html'));
+})
+
+app.post('/ask', function (req, res) {
+  //console.log(req.param);
+  var _req = req.body.question;
+  if(_req == "1") res.send('Dang Quang Vinh'); 
+  else res.send('Bac Ho Vi Dai');
+})
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+})
