@@ -2,6 +2,8 @@
 https://ibb.co/csyDsk
 https://ibb.co/kN04yQ
 https://ibb.co/mXJeXk
+
+
 <a href="https://ibb.co/csyDsk"><img src="https://preview.ibb.co/kqNv55/heart.jpg" alt="heart" border="0"></a>
 <a href="https://ibb.co/kN04yQ"><img src="https://preview.ibb.co/f6ea55/VNU.jpg" alt="VNU" border="0"></a>
 <a href="https://ibb.co/mXJeXk"><img src="https://preview.ibb.co/cuaRCk/WF.jpg" alt="WF" border="0"></a><br /><a target='_blank' href='https://vi.imgbb.com/'>picture hosting</a><br />
@@ -10,7 +12,7 @@ https://ibb.co/mXJeXk
 
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Hackathon by HDP</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -44,6 +46,7 @@ body, html {
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#feedback" class="w3-bar-item w3-button"><i class="fa fa-comment-o"></i> FEEDBACK</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -67,7 +70,7 @@ body, html {
     <span class="w3-jumbo w3-hide-small">HACKATHON by HPD</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">HACKATHON by HPD</span><br>
     <span class="w3-large">No more Cam Fucking Tinh Fucking Doan</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Start now and stop fucking cam tinh doan</a></p>
+    <p><a href="#work" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Start now and stop fucking cam tinh doan</a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     
@@ -156,26 +159,50 @@ body, html {
 <!-- Work Section -->
 <div class="w3-container" style="padding:128px 16px" id="work">
   <h3 class="w3-center">Choose Your Cam Tinh Doan question</h3>
-  <p class="w3-center w3-large">Tick in the box</p>
+  <p class="w3-center w3-large">Choose the apt question</p>
 
   <form action="/ask" method = "post">
+  
+   <select class="w3-select w3-border" name="option" >
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Muc tieu cua Doan</option>
+    <option value="2">Lich su cua Doan</option>
+    <option value="3">Y nghia ten goi qua cac thoi ki</option>
+    <option value="4">Vi sao lai vao Doan?</option>
+  </select>
+  
+  <!--
   <p>
-  <input class="w3-check" type="checkbox" name ="answer_1" value = 1>
+  <input class="w3-check w3-hover-text-red" type="checkbox" name ="answer" value = 1>
   <label>Muc tieu cua DOAN</label></p>
   <p>
-  <input class="w3-check" type="checkbox" name ="answer_2" value = 2>
-  <label> Lich su cua Doan</label></p>
+  <input class="w3-check w3-hover-text-red " type="checkbox" name ="answer" value = 2>
+   Lich su cua Doan</p>
   <p>
-  <input class="w3-check" type="checkbox" name ="answer_3" value = 3>
+  <input class="w3-check w3-hover-text-red" type="checkbox" name ="answer" value = 3>
   <label>Y nghia ten goi</label></p>
   <p>
-  <input class="w3-check" type="checkbox" name ="answer_4" value = 4>
+  <input class="w3-check w3-hover-text-red" type="checkbox" name ="answer" value = 4>
   <label>Vi sao vao Doan?</label></p>
-  <p>
-  <input class="w3-input w3-border w3-animate-input" name = "add_quest" type="text" placeholder = "Additional Question" style="width:50%"><p>
+  
+  <input class="w3-input w3-border w3-animate-input" name = "add_quest" type="text" placeholder = "Additional Question" style="width:50%"><p>-->
   
   
- <button class="w3-btn w3-black w3-ripple" value = "Submit">Generate my Cam Tinh Doan</button>
+ <input class="w3-btn w3-black w3-ripple w3-hover-pale-green " type = "submit" value = "Generate my Cam Tinh Doan">
+</form>
+
+</div>
+<!-- Feedbackaa-->
+<div class="w3-container" style="padding:128px 16px" id="feedback">
+  <h3 class="w3-center">Please give feedback</h3>
+  <p class="w3-center w3-large">Feedback will be mailed to abc@xyz.com</p>
+
+  <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+	<input class="w3-input w3-border w3-animate-input" type="text" placeholder = "Title" style="width:50%">
+	<input class="w3-input w3-border w3-animate-input" type="text" placeholder = "Email" style="width:50%">
+	<input class="w3-input w3-border w3-animate-input" type="text" placeholder = "Comments" style="width:50%">
+	<input class="w3-btn w3-black w3-ripple w3-hover-pale-green " type="submit" value="Send">
+	<input class="w3-btn w3-black w3-ripple w3-hover-pale-green " type="reset" value="Reset">
 </form>
   
 </div>
@@ -189,3 +216,18 @@ body, html {
   </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
