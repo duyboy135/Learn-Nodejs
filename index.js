@@ -17,7 +17,7 @@ app.post('/ask', function (req, res) {
   var a3 = (req.body.answer_3 === 'on');
   var a4 = (req.body.answer_4 === 'on');
   if( (a1 + a2 + a3 + a4) === 0 ) res.redirect('/invalid');
-  else if( (a1 + a2 + a3 + a4) > 1 ) res.send('./invalid');
+  else if( (a1 + a2 + a3 + a4) > 1 ) res.redirect('./invalid');
   else{
   	var id = '0';
 	if(a1 === 1) id = '1';
