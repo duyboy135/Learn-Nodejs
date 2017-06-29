@@ -16,6 +16,6 @@ app.post('/ask', function (req, res) {
   if(_req == "1") res.send('Dang Quang Vinh'); 
   else res.send('Bac Ho Vi Dai');
 })
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen((process.env.PORT || 5000), function () {
+  //console.log('Example app listening on port 3000!');
 })
